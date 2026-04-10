@@ -1,18 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Aseguradoras</title>
+    <meta charset="UTF-8">
+    <title>Aseguradoras Aliadas | iSeguros</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <div class="logo-container"><img src="logo.png" alt="iSeguros"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="seguros.html">Seguros</a></li>
+                <li><a href="aseguradoras.html" class="active">Aseguradoras</a></li>
+                <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="asistencia.html" class="asistencia-btn">Asistencia 24/7</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<h1>Aseguradoras con las que trabajamos</h1>
+    <main style="padding: 60px 10%; text-align: center;">
+        <h2 style="color: var(--azul-corporativo);">Trabajamos con los mejores</h2>
+        <p style="margin-bottom: 50px;">Contamos con el respaldo de las compañías más sólidas del mercado ecuatoriano.</p>
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; align-items: center;">
+            <div class="logo-partner">AIG METROPOLITANA</div>
+            <div class="logo-partner">SALUDSA</div>
+            <div class="logo-partner">SWEADEN</div>
+            <div class="logo-partner">ZURICH</div>
+            <div class="logo-partner">GENERALI</div>
+        </div>
+    </main>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Mapfre_logo.svg" width="200">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/AIG_logo.svg" width="200">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/BMI_logo.svg" width="200">
-
+    <style>
+        .logo-partner {
+            width: 200px;
+            height: 100px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #999;
+            border-radius: 8px;
+        }
+    </style>
 </body>
 </html>
