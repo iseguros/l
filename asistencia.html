@@ -1,51 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia 24/7 | iSeguros</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-<title>Asistencia 24/7</title>
+    <style>
+        /* Estilo específico para la sección de emergencia */
+        .emergency-header {
+            background: var(--rojo-alerta);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
 
-<style>
+        .box {
+            background: white;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-left: 8px solid var(--rojo-alerta);
+            transition: transform 0.3s ease;
+        }
 
-body{
-font-family:Poppins;
-background:#f4f7fb;
-text-align:center;
-}
+        .box:hover {
+            transform: scale(1.02);
+        }
 
-.box{
-background:white;
-padding:25px;
-margin:20px auto;
-max-width:600px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
+        .box h3 {
+            color: var(--azul-corporativo);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
 
-</style>
+        .phone-link {
+            display: block;
+            color: var(--rojo-alerta);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
 
+        .phone-link i {
+            margin-right: 10px;
+        }
+    </style>
 </head>
-
 <body>
 
-<h1>Asistencia 24/7</h1>
+    <header>
+        <div class="logo-container animate__animated animate__fadeInDown">
+            <img src="logo.png" alt="iSeguros Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="seguros.html">Seguros</a></li>
+                <li><a href="aseguradoras.html">Aseguradoras</a></li>
+                <li><a href="faq.html">Preguntas</a></li>
+                <li><a href="cotizar.html">Cotizar</a></li>
+                <li><a href="asistencia.html" class="asistencia-btn active">Asistencia 24/7</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<p>Si tuviste un accidente o necesitas asistencia urgente revisa los contactos de tu aseguradora.</p>
+    <main class="content-wrapper">
+        <div class="emergency-header animate__animated animate__pulse animate__infinite">
+            <h1><i class="fas fa-phone-volume"></i> ASISTENCIA 24/7</h1>
+            <p>Tu tranquilidad es nuestra prioridad. Si tuviste un accidente o necesitas asistencia urgente, contacta a tu aseguradora de inmediato.</p>
+        </div>
 
-<div class="box">
+        <div class="animate__animated animate__fadeInUp">
+            <div class="box">
+                <h3>AIG Seguros</h3>
+                <p>Atención inmediata en todo el país:</p>
+                <a href="tel:1800244244" class="phone-link"><i class="fas fa-phone"></i> 1800 AIG-AIG</a>
+                <a href="tel:022990711" class="phone-link"><i class="fas fa-headset"></i> (02) 2990711</a>
+                <a href="https://wa.me/593992431655" class="phone-link" style="color: #25d366;"><i class="fab fa-whatsapp"></i> 0992431655</a>
+            </div>
 
-<h3>AIG Seguros</h3>
+            </div>
+    </main>
 
-<p>
+    <footer>
+        <p>&copy; 2026 iSeguros | Cuenca, Ecuador</p>
+    </footer>
 
-1800 AIG-AIG<br>
-
-(02) 2990711<br>
-
-0992431655
-
-</p>
-
-</div>
+    <a href="https://wa.me/593987801917" class="wsp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
