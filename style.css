@@ -909,3 +909,25 @@ nav ul li a.active {
     /* Se eliminó la línea de animation para quitar el movimiento */
 }
 
+CSS
+/* El menú que NO se mueve, solo resalta */
+nav ul li a.active {
+    display: inline-block;
+    transform: scale(1.08); /* Se queda grande fijo, sin moverse */
+    font-weight: 700;
+    color: #ffffff !important;
+    position: relative;
+    text-decoration: none;
+    /* AQUÍ NO DEBE HABER NINGUNA LÍNEA DE 'ANIMATION' */
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 15%;
+    width: 70%;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 10px;
+}
