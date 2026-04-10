@@ -1,83 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>iSeguros | Tu broker de confianza</title>
 
+<meta name="description" content="iSeguros - Broker de seguros en Ecuador con más de 10 años de experiencia asesorando en seguros de vehículos, salud, vida y empresas.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 
 *{
+margin:0;
+padding:0;
 box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f4f7fc;
+background:#f4f7fb;
 color:#333;
 }
 
-/* NAV */
+/* NAVBAR */
 
 header{
-background:#0a3d91;
-color:white;
-padding:15px 20px;
+background:#0b3c91;
+padding:18px 40px;
 position:sticky;
 top:0;
 z-index:1000;
 }
 
 nav{
-max-width:1200px;
-margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
+font-size:22px;
+font-weight:600;
+}
+
+.logo img{
+height:40px;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
-font-weight:bold;
+font-weight:500;
+transition:0.3s;
 }
 
 nav a:hover{
 opacity:0.8;
 }
 
+.asistencia{
+background:#e63946;
+padding:8px 15px;
+border-radius:6px;
+}
+
 /* HERO */
 
 .hero{
-background:linear-gradient(120deg,#0a3d91,#1e64d1);
+background:linear-gradient(120deg,#0b3c91,#1f6be0);
 color:white;
+padding:120px 20px;
 text-align:center;
-padding:100px 20px;
 }
 
 .hero h1{
-font-size:50px;
-margin-bottom:10px;
+font-size:48px;
+margin-bottom:15px;
 }
 
 .hero p{
 font-size:20px;
 max-width:700px;
 margin:auto;
-}
-
-.btn{
-background:white;
-color:#0a3d91;
-padding:14px 30px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-display:inline-block;
-margin-top:25px;
 }
 
 /* SECTIONS */
@@ -90,128 +109,72 @@ padding:70px 20px;
 
 h2{
 text-align:center;
-color:#0a3d91;
 margin-bottom:40px;
+color:#0b3c91;
 }
 
-/* ABOUT */
+/* GRID */
 
-.about{
-display:flex;
-flex-wrap:wrap;
-gap:40px;
-align-items:center;
-}
-
-.about img{
-width:320px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* PRODUCTS */
-
-.products{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
 }
 
 .card{
 background:white;
 padding:25px;
-border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
+cursor:pointer;
+transition:0.3s;
 }
 
-.card h3{
-color:#0a3d91;
+.card:hover{
+transform:translateY(-5px);
 }
 
-/* INSURERS */
+/* LOGOS */
 
-.insurers{
+.logos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:20px;
-text-align:center;
+gap:30px;
+align-items:center;
 }
 
-.insurer{
+.logos img{
+width:100%;
+max-height:60px;
+object-fit:contain;
+filter:grayscale(100%);
+cursor:pointer;
+transition:0.3s;
+}
+
+.logos img:hover{
+filter:none;
+}
+
+/* INFO ASEGURADORAS */
+
+.aseguradora-info{
+display:none;
 background:white;
 padding:25px;
-border-radius:6px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-font-weight:bold;
-}
-
-/* ASSISTANCE */
-
-.assistance{
-background:#e9f0ff;
-}
-
-.assistance-box{
-background:white;
-padding:20px;
-border-radius:8px;
-margin-bottom:15px;
-}
-
-/* FAQ */
-
-.faq{
-max-width:800px;
-margin:auto;
-}
-
-.faq h4{
-color:#0a3d91;
-}
-
-/* FORM */
-
-form{
-background:white;
-padding:30px;
-border-radius:8px;
-max-width:500px;
-margin:auto;
+margin-top:25px;
+border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-input,select{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:4px;
-}
-
-button{
-background:#0a3d91;
-color:white;
-padding:12px;
-border:none;
-width:100%;
-font-size:16px;
-border-radius:4px;
-}
-
-/* CONTACT */
-
-.contact{
-text-align:center;
 }
 
 /* FOOTER */
 
 footer{
-background:#0a3d91;
+background:#0b3c91;
 color:white;
+padding:40px;
 text-align:center;
-padding:30px;
-margin-top:50px;
+margin-top:40px;
 }
 
 /* WHATSAPP */
@@ -222,27 +185,30 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:16px 20px;
+padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
-font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-@media(max-width:800px){
-
-.hero h1{
-font-size:36px;
-}
-
-.about{
-flex-direction:column;
-text-align:center;
-}
-
+font-weight:600;
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
 }
 
 </style>
+
+<script>
+
+function mostrarAseguradora(id){
+
+let secciones=document.querySelectorAll(".aseguradora-info");
+
+secciones.forEach(sec=>{
+sec.style.display="none";
+});
+
+document.getElementById(id).style.display="block";
+
+}
+
+</script>
 
 </head>
 
@@ -252,18 +218,23 @@ text-align:center;
 
 <nav>
 
-<h2>iSeguros</h2>
-
-<div>
-
-<a href="#nosotros">Nosotros</a>
-<a href="#seguros">Seguros</a>
-<a href="#aseguradoras">Aseguradoras</a>
-<a href="#asistencia">Asistencia</a>
-<a href="#faq">FAQ</a>
-<a href="#contacto">Contacto</a>
-
+<div class="logo">
+<img src="logo.png">
+iSeguros
 </div>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="nosotros.html">Nosotros</a></li>
+<li><a href="seguros.html">Seguros</a></li>
+<li><a href="aseguradoras.html">Aseguradoras</a></li>
+<li><a class="asistencia" href="asistencia.html">Asistencia 24/7</a></li>
+<li><a href="faq.html">Preguntas</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+<li><a href="cotizar.html">Cotizar</a></li>
+
+</ul>
 
 </nav>
 
@@ -274,208 +245,88 @@ text-align:center;
 
 <h1>iSeguros</h1>
 
-<p>Tu broker de confianza</p>
-
-<p>Más de 10 años de experiencia asesorando y protegiendo a nuestros clientes con las mejores aseguradoras del Ecuador.</p>
-
-<a class="btn" href="#cotizar">Cotizar seguro</a>
+<p>Tu broker de confianza. Más de 10 años de experiencia asesorando a personas y empresas en el sector asegurador.</p>
 
 </section>
 
 
-<section id="nosotros">
-
-<h2>Sobre Nosotros</h2>
-
-<div class="about">
-
-<img src="foto-gerente.jpg">
-
-<div>
-
-<p>
-iSeguros es un broker de seguros ecuatoriano enfocado en brindar asesoría profesional, transparente y cercana a cada cliente.
-</p>
-
-<p>
-La empresa fue fundada por <strong>Pablo Andrés Idrovo Espinoza</strong>, profesional con más de 10 años de experiencia en el sector asegurador trabajando en brokers y aseguradoras del país.
-</p>
-
-<p>
-Nuestro objetivo es ayudar a personas y empresas a encontrar la mejor protección para su patrimonio, su salud y su futuro.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="seguros">
-
-<h2>Nuestros Seguros</h2>
-
-<div class="products">
-
-<div class="card">
-<h3>Seguro de Vehículos</h3>
-<p>Protege tu vehículo ante accidentes, robos o daños a terceros.</p>
-</div>
-
-<div class="card">
-<h3>Asistencia Médica</h3>
-<p>Protección médica nacional e internacional para ti y tu familia.</p>
-</div>
-
-<div class="card">
-<h3>Seguro de Vida</h3>
-<p>Garantiza la estabilidad económica de tu familia.</p>
-</div>
-
-<div class="card">
-<h3>Seguro de Hogar</h3>
-<p>Protección contra incendios, robos y desastres naturales.</p>
-</div>
-
-<div class="card">
-<h3>Seguro para Negocios</h3>
-<p>Protege tu empresa, local comercial o emprendimiento.</p>
-</div>
-
-<div class="card">
-<h3>Seguro para Camiones</h3>
-<p>Cobertura especializada para transporte pesado.</p>
-</div>
-
-<div class="card">
-<h3>Maquinaria Pesada</h3>
-<p>Protección para maquinaria de construcción o agrícola.</p>
-</div>
-
-<div class="card">
-<h3>Fianzas</h3>
-<p>Garantías utilizadas en contratos, proyectos y licitaciones.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="aseguradoras">
+<section>
 
 <h2>Aseguradoras con las que trabajamos</h2>
 
-<p style="text-align:center;">Trabajamos con las mejores aseguradoras del país para brindarte diferentes opciones.</p>
+<div class="logos">
 
-<div class="insurers">
+<img onclick="mostrarAseguradora('mapfre')" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Mapfre_logo.svg">
 
-<div class="insurer">Latina Seguros</div>
-<div class="insurer">Mapfre Seguros</div>
-<div class="insurer">Hispana de Seguros</div>
-<div class="insurer">Seguros Unidos</div>
-<div class="insurer">Seguros Atlántida</div>
+<img onclick="mostrarAseguradora('aig')" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/AIG_logo.svg">
 
-</div>
+<img onclick="mostrarAseguradora('bmi')" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/BMI_logo.svg">
 
-</section>
-
-
-<section id="asistencia" class="assistance">
-
-<h2>Asistencia 24/7</h2>
-
-<p style="text-align:center;">Si tuviste un accidente o necesitas asistencia urgente comunícate directamente con tu aseguradora.</p>
-
-<div class="assistance-box"><strong>Latina Seguros</strong> – Contacto de asistencia</div>
-<div class="assistance-box"><strong>Mapfre Seguros</strong> – Contacto de asistencia</div>
-<div class="assistance-box"><strong>Hispana de Seguros</strong> – Contacto de asistencia</div>
-<div class="assistance-box"><strong>Seguros Unidos</strong> – Contacto de asistencia</div>
-<div class="assistance-box"><strong>Seguros Atlántida</strong> – Contacto de asistencia</div>
-
-</section>
-
-
-<section id="faq">
-
-<h2>Preguntas Frecuentes</h2>
-
-<div class="faq">
-
-<h4>¿Qué hace un broker de seguros?</h4>
-<p>Un broker es un asesor independiente que te ayuda a encontrar el seguro ideal entre varias aseguradoras.</p>
-
-<h4>¿Es más caro contratar con un broker?</h4>
-<p>No. El precio es el mismo pero recibes asesoría profesional.</p>
-
-<h4>¿Qué hago en caso de accidente?</h4>
-<p>Puedes comunicarte con la asistencia de tu aseguradora o revisar nuestra sección Asistencia 24/7.</p>
-
-<h4>¿Por qué contratar con un broker?</h4>
-<p>Porque tendrás asesoría independiente, varias opciones de aseguradoras y acompañamiento en caso de siniestro.</p>
+<img onclick="mostrarAseguradora('liberty')" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Liberty_Mutual_logo.svg">
 
 </div>
 
-</section>
 
+<div id="aig" class="aseguradora-info">
 
-<section id="cotizar">
+<h3>AIG Seguros</h3>
 
-<h2>Cotizar Seguro</h2>
+<p>
 
-<form>
+<strong>Quito:</strong> Av. Brasil 293 y Granda Centeno Edificio IACA. PB<br><br>
 
-<input type="text" placeholder="Nombre">
+<strong>Guayaquil:</strong> Av. Rodrigo Chávez González, Parque Empresarial Colón Edif. Corporativo 2, Piso 2, Oficina 203<br><br>
 
-<input type="tel" placeholder="Teléfono">
+<strong>Cuenca:</strong> Av. Ordoñez Lasso 5-42 y Laureles<br><br>
 
-<select>
-<option>Tipo de seguro</option>
-<option>Vehículo</option>
-<option>Salud</option>
-<option>Vida</option>
-<option>Hogar</option>
-<option>Empresa</option>
-</select>
+<strong>Horario de Atención al cliente:</strong><br>
 
-<button>Solicitar cotización</button>
+Lunes a Jueves: 8h30 a 17h00<br>
+Viernes: 8h30 a 15h00<br><br>
 
-</form>
+<strong>Reportes:</strong><br>
 
-</section>
+Ecuador.Indemnizaciones@aig.com<br>
 
+1800 AIG-AIG (244 244) opción 2<br>
 
-<section id="contacto" class="contact">
+(02) 299-0711<br>
 
-<h2>Contacto</h2>
+099 243 1655
 
-<p><strong>Teléfono:</strong> 098 780 1917</p>
-
-<p><strong>Correo:</strong> pidrovo@iseguros.com.ec</p>
-
-<p><strong>Dirección:</strong><br>
-Av. Solano y 12 de Abril<br>
-Edificio San Vicente de Paul
 </p>
+
+</div>
 
 </section>
 
 
 <footer>
 
-<p>© 2026 iSeguros | Tu broker de confianza</p>
+<p><strong>iSeguros</strong></p>
+
+<p>Tu broker de confianza</p>
+
+<p>
+Teléfono: 098 780 1917<br>
+Correo: pidrovo@iseguros.com.ec
+</p>
+
+<p>
+Av. Solano y 12 de Abril<br>
+Edificio San Vicente de Paul
+</p>
+
+<p style="margin-top:20px">
+© 2026 iSeguros
+</p>
 
 </footer>
 
 
 <a class="whatsapp" href="https://wa.me/593987801917" target="_blank">
-
 WhatsApp
-
 </a>
 
-
 </body>
-</html>
 </html>
