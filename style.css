@@ -591,83 +591,60 @@ p { margin-top: 0; }
 }
 
 
-/* Sección roja optimizada */
-.asistencia-header {
-    background: linear-gradient(135deg, #ff4d29, #e63e1c); /* Gradiente para un look más premium */
+/* Sección roja ultra-delgada y minimalista */
+.asistencia-hero-slim {
+    background: var(--rojo);
     color: white;
-    padding: 25px 20px; /* Reducción de espacio para que sea delgado */
+    padding: 15px 10px; /* Padding mínimo para máxima delgadez */
     text-align: center;
+    border-radius: 0 0 25px 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(255, 75, 43, 0.15);
 }
 
-.asistencia-header h2 {
-    font-size: 1.6rem;
-    margin-bottom: 5px;
+.asistencia-hero-slim h1 {
+    font-size: 1.2rem; /* Tamaño de letra reducido */
+    margin-bottom: 2px;
     font-weight: 700;
 }
 
-.asistencia-header p {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-    opacity: 0.9;
+.asistencia-hero-slim p {
+    font-size: 0.8rem; /* Párrafo muy discreto */
+    margin-bottom: 8px;
+    opacity: 0.85;
 }
 
-/* Buscador moderno */
+/* Buscador compacto */
 .search-container {
-    max-width: 450px;
+    max-width: 380px; /* Más angosto para mayor elegancia */
     margin: 0 auto;
     position: relative;
 }
 
 .search-container i {
     position: absolute;
-    left: 15px;
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
     color: #888;
+    font-size: 0.8rem;
 }
 
 #busquedaAseguradora {
     width: 100%;
-    padding: 10px 15px 10px 45px;
-    border-radius: 25px;
+    padding: 6px 12px 6px 35px; /* Altura del buscador reducida */
+    border-radius: 20px;
     border: none;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-size: 0.85rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     outline: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 #busquedaAseguradora:focus {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-    transform: translateY(-2px);
-}
-
-
-.asistencia-hero-slim {
-    background: var(--rojo);
-    color: white;
-    padding: 20px 15px; /* Reducido para que sea más delgada */
-    text-align: center;
-    border-radius: 0 0 30px 30px;
-    margin-bottom: 25px;
-}
-
-.asistencia-hero-slim h1 {
-    font-size: 1.4rem; /* Texto más pequeño */
-    margin-bottom: 2px;
-}
-
-.asistencia-hero-slim p {
-    font-size: 0.85rem; /* Párrafo más discreto */
-    margin-bottom: 10px;
-    opacity: 0.9;
-}
-
-/* Ajuste del buscador para que no se vea amontonado */
-.search-container {
-    max-width: 400px; /* Un poco más angosto */
-    margin: 10px auto 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transform: translateY(-1px);
 }
 
 #busquedaAseguradora {
