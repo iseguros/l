@@ -895,3 +895,14 @@ nav ul li a:hover:not(.active) {
     transform: translateY(-2px);
     color: #ffffff;
 }
+
+
+/* Ajuste específico para agrandar el logo de Sweaden por URL */
+.insurer-card:has(h3:contains("SWEADEN")) .insurer-logo,
+.insurer-logo[src*="sweaden"], 
+.insurer-logo[alt*="Sweaden"] {
+    max-height: 85px !important; /* Ajusta este número (ej. 90px o 100px) hasta que se vea bien */
+    width: auto !important;
+    transform: scale(1.3); /* Esto lo agranda un 30% extra de forma interna */
+    transition: transform 0.3s ease;
+}
