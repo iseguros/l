@@ -11,14 +11,46 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .asistencia-hero {
+        /* Ajuste para que el rectángulo sea más delgado */
+        .asistencia-hero-slim {
             background: var(--rojo);
             color: white;
-            padding: 60px 20px;
+            padding: 30px 20px; /* Reducido de 60px a 30px */
             text-align: center;
             border-radius: 0 0 30px 30px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(255, 75, 43, 0.2);
+        }
+
+        .asistencia-hero-slim h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        /* Estilo del buscador solicitado */
+        .search-container {
+            max-width: 500px;
+            margin: 15px auto 0;
+            position: relative;
+        }
+
+        .search-container i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        #busquedaAseguradora {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border-radius: 30px;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            outline: none;
         }
 
         .emergency-grid {
@@ -101,13 +133,18 @@
         </nav>
     </header>
 
-    <div class="asistencia-hero animate__animated animate__fadeIn">
-        <h1 class="animate__animated animate__pulse animate__infinite">¿Necesitas Ayuda Inmediata?</h1>
+    <div class="asistencia-hero-slim animate__animated animate__fadeIn">
+        <h1>¿Necesitas Ayuda Inmediata?</h1>
         <p>Localiza tu aseguradora y llama ahora mismo. Estamos contigo 24/7.</p>
+        
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="busquedaAseguradora" placeholder="Busca tu aseguradora..." onkeyup="filtrarAseguradoras()">
+        </div>
     </div>
 
     <main class="container">
-        <div class="emergency-grid">
+        <div class="emergency-grid" id="emergencyGrid">
             
             <div class="asistencia-card">
                 <div class="asistencia-info">
@@ -173,6 +210,23 @@
     <a href="https://wa.me/593987801917" class="wsp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <script>
+        function filtrarAseguradoras() {
+            let input = document.getElementById('busquedaAseguradora');
+            let filter = input.value.toLowerCase();
+            let cards = document.querySelectorAll('.asistencia-card');
+
+            cards.forEach(card => {
+                let nombre = card.querySelector('h3').innerText.toLowerCase();
+                if (nombre.includes(filter)) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
