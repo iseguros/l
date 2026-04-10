@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistencia 24/7 | iSeguros</title>
+    <title>Cotizar Seguro | iSeguros</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,82 +11,78 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .asistencia-container {
-            max-width: 900px;
-            margin: 40px auto;
+        .quote-main {
+            max-width: 800px;
+            margin: 50px auto;
             padding: 0 20px;
         }
 
-        .emergency-header {
-            background: var(--rojo);
-            color: white;
+        .quote-card {
+            background: white;
             padding: 40px;
             border-radius: 20px;
-            text-align: center;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(255, 75, 43, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--azul);
         }
 
-        .emergency-header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--azul-dark);
+            font-size: 0.9rem;
         }
 
-        .asistencia-grid {
+        .input-field {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #edf2f7;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            transition: 0.3s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: var(--azul);
+            background: #fff;
+        }
+
+        .form-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
 
-        .card-asistencia {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-left: 8px solid var(--rojo);
-            transition: 0.3s;
-        }
-
-        .card-asistencia:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .info-asistencia h3 {
-            color: var(--azul-dark);
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-        }
-
-        .info-asistencia p {
-            font-weight: 600;
-            color: #555;
-            font-size: 1.1rem;
-        }
-
-        .btn-llamar {
-            background: var(--rojo);
+        .submit-btn {
+            background: var(--azul);
             color: white;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: bold;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
             display: flex;
+            justify-content: center;
             align-items: center;
             gap: 10px;
-            transition: 0.3s;
         }
 
-        .btn-llamar:hover {
-            background: #d43f26;
+        .submit-btn:hover {
+            background: var(--azul-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 97, 175, 0.3);
         }
 
         @media (max-width: 600px) {
-            .card-asistencia { flex-direction: column; text-align: center; gap: 20px; }
-            .emergency-header h1 { font-size: 1.6rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .quote-card { padding: 25px; }
+            .quote-main { margin: 30px auto; }
         }
     </style>
 </head>
@@ -99,69 +95,59 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="asistencia.html" class="asistencia-btn">Asistencia 24/7</a></li>
                 <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                <li><a href="cotizar.html">Cotizar</a></li>
-                <li><a href="asistencia.html" class="asistencia-btn active">Asistencia 24/7</a></li>
+                <li><a href="seguros.html">Productos</a></li>
+                <li><a href="cotizar.html" class="active">Cotizar</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="asistencia-container animate__animated animate__fadeIn">
-        
-        <div class="emergency-header animate__animated animate__pulse animate__infinite">
-            <h1><i class="fas fa-phone-alt"></i> CENTRAL DE EMERGENCIAS</h1>
-            <p>Estamos disponibles para ayudarte en todo momento. Llama directamente a tu aseguradora.</p>
+    <main class="quote-main animate__animated animate__fadeInUp">
+        <div class="section-title">
+            <h2>Solicita tu Cotización</h2>
+            <div class="underline"></div>
+            <p style="text-align: center; color: #666; margin-top: -30px; margin-bottom: 40px;">Un asesor experto analizará las mejores opciones para ti.</p>
         </div>
 
-        <div class="asistencia-grid">
-            <div class="card-asistencia">
-                <div class="info-asistencia">
-                    <h3>AIG Metropolitana</h3>
-                    <p>1800 244 244</p>
+        <div class="quote-card">
+            <form action="#">
+                <div class="form-grid">
+                    <div>
+                        <label class="form-label">Nombre Completo</label>
+                        <input type="text" class="input-field" placeholder="Ej. David Tello" required>
+                    </div>
+                    <div>
+                        <label class="form-label">WhatsApp de contacto</label>
+                        <input type="tel" class="input-field" placeholder="099 XXX XXXX" required>
+                    </div>
                 </div>
-                <a href="tel:1800244244" class="btn-llamar"><i class="fas fa-phone"></i> LLAMAR</a>
-            </div>
 
-            <div class="card-asistencia">
-                <div class="info-asistencia">
-                    <h3>SaludSA</h3>
-                    <p>1800 725 837</p>
-                </div>
-                <a href="tel:1800725837" class="btn-llamar"><i class="fas fa-phone"></i> LLAMAR</a>
-            </div>
+                <label class="form-label">Correo Electrónico</label>
+                <input type="email" class="input-field" placeholder="ejemplo@correo.com" required>
 
-            <div class="card-asistencia">
-                <div class="info-asistencia">
-                    <h3>Sweaden Seguros</h3>
-                    <p>1800 793 233</p>
-                </div>
-                <a href="tel:1800793233" class="btn-llamar"><i class="fas fa-phone"></i> LLAMAR</a>
-            </div>
+                <label class="form-label">¿Qué producto te interesa?</label>
+                <select class="input-field" required>
+                    <option value="">Selecciona un seguro</option>
+                    <option value="vehicular">Seguro Vehicular</option>
+                    <option value="salud">Seguro de Salud</option>
+                    <option value="hogar">Seguro de Hogar</option>
+                    <option value="vida">Seguro de Vida</option>
+                    <option value="empresarial">Seguro Empresarial</option>
+                </select>
 
-            <div class="card-asistencia">
-                <div class="info-asistencia">
-                    <h3>Zurich Seguros</h3>
-                    <p>1800 987 424</p>
-                </div>
-                <a href="tel:1800987424" class="btn-llamar"><i class="fas fa-phone"></i> LLAMAR</a>
-            </div>
+                <label class="form-label">Detalles adicionales (Opcional)</label>
+                <textarea class="input-field" rows="4" placeholder="Ej. Marca y año del vehículo, número de familiares, etc."></textarea>
 
-            <div class="card-asistencia">
-                <div class="info-asistencia">
-                    <h3>Generali</h3>
-                    <p>1800 436 372</p>
-                </div>
-                <a href="tel:1800436372" class="btn-llamar"><i class="fas fa-phone"></i> LLAMAR</a>
-            </div>
-        </div>
-
-        <div style="margin-top: 40px; text-align: center; color: #777;">
-            <p><i class="fas fa-info-circle"></i> Si tu aseguradora no aparece en la lista, contáctanos directamente a nuestro número principal.</p>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Enviar Información
+                </button>
+            </form>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 iSeguros | Atención Prioritaria 24/7 | Cuenca, Ecuador</p>
+        <p>&copy; 2026 iSeguros | Tu tranquilidad en nuestras manos</p>
     </footer>
 
     <a href="https://wa.me/593987801917" class="wsp-float" target="_blank">
