@@ -828,3 +828,16 @@ p { margin-top: 0; }
     background: var(--azul-dark);
     transform: translateY(-2px);
 }
+
+/* Estilo para los números marcables */
+.detalle-item a {
+    color: var(--rojo);
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.detalle-item a:hover {
+    color: var(--azul);
+    text-decoration: underline;
+}
