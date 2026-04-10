@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        /* Estilos específicos para la cabecera de la página de productos */
         .products-hero {
             background: linear-gradient(rgba(0, 97, 175, 0.85), rgba(0, 97, 175, 0.85)), 
                         url('https://images.unsplash.com/photo-1454165833767-0266b196773b?q=80&w=1200&auto=format&fit=crop');
@@ -37,6 +38,8 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: 0.3s;
             border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
         }
 
         .product-card-full:hover {
@@ -45,44 +48,45 @@
         }
 
         .product-image-box {
-            height: 200px;
-            background-color: var(--azul-dark);
+            height: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
 
         .product-info {
-            padding: 30px;
+            padding: 25px;
+            text-align: center;
+            flex-grow: 1;
         }
 
         .product-info h3 {
             color: var(--azul);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
         }
 
         .product-info p {
             color: #666;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 20px;
         }
 
-        .btn-more-info {
+        .btn-quote-item {
             display: inline-block;
-            color: var(--rojo);
-            font-weight: 700;
+            background: var(--azul);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
             text-decoration: none;
-            text-transform: uppercase;
+            font-weight: 600;
             font-size: 0.85rem;
-            border-bottom: 2px solid var(--rojo);
             transition: 0.3s;
         }
 
-        .btn-more-info:hover {
-            letter-spacing: 1px;
+        .btn-quote-item:hover {
+            background: var(--rojo);
         }
 
         @media (max-width: 768px) {
@@ -109,7 +113,7 @@
 
     <section class="products-hero animate__animated animate__fadeIn">
         <h1>Nuestras Soluciones de Protección</h1>
-        <p>Expertos en encontrar el seguro ideal para cada necesidad.</p>
+        <p>Expertos en encontrar el seguro ideal para cada necesidad en Cuenca y todo el Ecuador.</p>
     </section>
 
     <main class="container section-padding">
@@ -121,41 +125,41 @@
                 </div>
                 <div class="product-info">
                     <h3>Seguro Vehicular</h3>
-                    <p>Protección contra daños propios, robo total y responsabilidad civil. Incluye asistencia mecánica y grúa nacional.</p>
-                    <a href="cotizar.html" class="btn-more-info">Solicitar Cotización</a>
+                    <p>Protección contra choques, robo total o parcial y asistencia vial nacional las 24 horas.</p>
+                    <a href="cotizar.html" class="btn-quote-item">Cotizar Ahora</a>
                 </div>
             </div>
 
             <div class="product-card-full animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
                 <div class="product-image-box" style="background: #fce4ec; color: #c2185b;">
-                    <i class="fas fa-user-nurse"></i>
+                    <i class="fas fa-heartbeat"></i>
                 </div>
                 <div class="product-info">
                     <h3>Seguro de Salud</h3>
-                    <p>Acceso a medicina prepagada con cobertura para hospitalización, consultas externas y farmacias a nivel nacional.</p>
-                    <a href="cotizar.html" class="btn-more-info">Solicitar Cotización</a>
+                    <p>Acceso a las mejores redes hospitalarias con planes de medicina prepagada a tu medida.</p>
+                    <a href="cotizar.html" class="btn-quote-item">Cotizar Ahora</a>
                 </div>
             </div>
 
             <div class="product-card-full animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
                 <div class="product-image-box" style="background: #e8f5e9; color: #388e3c;">
-                    <i class="fas fa-home-heart"></i>
+                    <i class="fas fa-home"></i>
                 </div>
                 <div class="product-info">
                     <h3>Seguro de Hogar</h3>
-                    <p>Respaldo total ante incendios, inundaciones, robos y asistencia técnica para reparaciones del hogar.</p>
-                    <a href="cotizar.html" class="btn-more-info">Solicitar Cotización</a>
+                    <p>Respaldo total ante incendios, inundaciones, robos y daños eléctricos en tu vivienda.</p>
+                    <a href="cotizar.html" class="btn-quote-item">Cotizar Ahora</a>
                 </div>
             </div>
 
             <div class="product-card-full animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
                 <div class="product-image-box" style="background: #fff3e0; color: #f57c00;">
-                    <i class="fas fa-hand-holding-heart"></i>
+                    <i class="fas fa-shield-alt"></i>
                 </div>
                 <div class="product-info">
                     <h3>Seguro de Vida</h3>
-                    <p>Asegura el futuro financiero de tus seres queridos con planes flexibles y coberturas adicionales de accidentes.</p>
-                    <a href="cotizar.html" class="btn-more-info">Solicitar Cotización</a>
+                    <p>La seguridad económica que tu familia necesita frente a cualquier imprevisto futuro.</p>
+                    <a href="cotizar.html" class="btn-quote-item">Cotizar Ahora</a>
                 </div>
             </div>
 
@@ -163,7 +167,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 iSeguros | Expertos en Protección | Cuenca, Ecuador</p>
+        <p>&copy; 2026 iSeguros | Expertos en Asesoría de Seguros | Cuenca, Ecuador</p>
     </footer>
 
     <a href="https://wa.me/593987801917" class="wsp-float" target="_blank">
