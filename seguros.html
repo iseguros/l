@@ -1,139 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Seguros | iSeguros</title>
-
-<style>
-
-body{
-font-family:Poppins;
-background:#f4f7fb;
-margin:0;
-}
-
-header{
-background:#0a3d91;
-padding:18px 40px;
-color:white;
-}
-
-nav ul{
-display:flex;
-gap:20px;
-list-style:none;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-}
-
-.asistencia{
-background:#e63946;
-padding:6px 12px;
-border-radius:6px;
-}
-
-section{
-max-width:1100px;
-margin:auto;
-padding:70px 20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-h1{
-text-align:center;
-color:#0a3d91;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <title>Nuestros Seguros | iSeguros</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-
 <body>
+    <header>
+        <div class="logo-container"><img src="logo.png" alt="iSeguros"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="seguros.html" class="active">Seguros</a></li>
+                <li><a href="aseguradoras.html">Aseguradoras</a></li>
+                <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="asistencia.html" class="asistencia-btn">Asistencia 24/7</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
+    <main style="padding: 60px 10%;">
+        <h2 style="text-align:center; color: var(--azul-corporativo); margin-bottom: 40px;">Protección a tu medida</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+            <div class="card-seguro animate__animated animate__fadeInUp">
+                <i class="fas fa-car" style="font-size: 3rem; color: var(--azul-corporativo);"></i>
+                <h3>Vehicular</h3>
+                <p>Cobertura completa contra choques, robo total o parcial y asistencia vial las 24 horas.</p>
+            </div>
+            <div class="card-seguro animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                <i class="fas fa-heartbeat" style="font-size: 3rem; color: var(--azul-corporativo);"></i>
+                <h3>Salud</h3>
+                <p>Planes de medicina prepagada con acceso a las mejores redes hospitalarias del país.</p>
+            </div>
+            <div class="card-seguro animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                <i class="fas fa-home" style="font-size: 3rem; color: var(--azul-corporativo);"></i>
+                <h3>Hogar</h3>
+                <p>Protege tu patrimonio ante incendios, inundaciones, robos y daños eléctricos.</p>
+            </div>
+            <div class="card-seguro animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                <i class="fas fa-briefcase" style="font-size: 3rem; color: var(--azul-corporativo);"></i>
+                <h3>Empresarial</h3>
+                <p>Soluciones para pequeñas y grandes empresas: multiriesgo, responsabilidad civil y más.</p>
+            </div>
+        </div>
+    </main>
 
-<nav>
-
-<ul>
-
-<li><a href="index.html">Inicio</a></li>
-<li><a href="nosotros.html">Nosotros</a></li>
-<li><a href="seguros.html">Seguros</a></li>
-<li><a href="aseguradoras.html">Aseguradoras</a></li>
-<li><a class="asistencia" href="asistencia.html">Asistencia 24/7</a></li>
-<li><a href="faq.html">Preguntas</a></li>
-<li><a href="contacto.html">Contacto</a></li>
-<li><a href="cotizar.html">Cotizar</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-
-<section>
-
-<h1>Seguros que ofrecemos</h1>
-
-<div class="grid">
-
-<div class="card">
-<h3>Seguro Vehicular</h3>
-<p>Protección contra accidentes, robos y daños.</p>
-</div>
-
-<div class="card">
-<h3>Seguro de Salud</h3>
-<p>Cobertura médica nacional e internacional.</p>
-</div>
-
-<div class="card">
-<h3>Seguro de Vida</h3>
-<p>Protege a tu familia ante imprevistos.</p>
-</div>
-
-<div class="card">
-<h3>Seguro Hogar</h3>
-<p>Protección contra incendios, robos y daños.</p>
-</div>
-
-<div class="card">
-<h3>Seguro Empresarial</h3>
-<p>Protección para negocios y empresas.</p>
-</div>
-
-<div class="card">
-<h3>Maquinaria y Camiones</h3>
-<p>Seguros especializados para transporte y maquinaria.</p>
-</div>
-
-<div class="card">
-<h3>Fianzas</h3>
-<p>Garantías contractuales para proyectos.</p>
-</div>
-
-</div>
-
-</section>
-
+    <style>
+        .card-seguro {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .card-seguro:hover { transform: translateY(-10px); border-bottom: 5px solid var(--azul-corporativo); }
+        .card-seguro h3 { margin: 20px 0; color: var(--azul-corporativo); }
+    </style>
 </body>
 </html>
