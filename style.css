@@ -514,20 +514,13 @@ h1 { margin-bottom: 0; }
 p { margin-top: 0; }
 
 
-/* --- CORRECCIÓN ERROR LÍNEA BLANCA WHATSAPP --- */
+/* --- CORRECCIÓN ERROR LÍNEA BLANCA WHATSAPP (LINE-HEIGHT: 0) --- */
 .wsp-float {
-    /* Convierte el enlace en un contenedor Flex */
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
-    
-    /* Elimina cualquier espacio de línea (line-height) heredado del texto normal */
     line-height: 0;
+    padding: 0; /* Asegura que no haya padding interno que empuje el icono */
 }
 
-/* Opcional: Para asegurar que el icono no tenga espacios internos */
 .wsp-float i {
-    margin: 0;
-    padding: 0;
-    display: block; /* Opcional: Para tratar el icono como bloque */
+    display: block; /* Convierte el icono en un bloque para eliminar comportamiento de texto */
+    margin: 0 auto; /* Centra el icono dentro del contenedor si es necesario */
 }
