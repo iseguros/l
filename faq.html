@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .faq-container {
+        .faq-main {
             max-width: 900px;
             margin: 60px auto;
             padding: 0 20px;
@@ -20,7 +20,7 @@
         .faq-item {
             background: #fff;
             margin-bottom: 15px;
-            border-radius: 10px;
+            border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             overflow: hidden;
             border-left: 5px solid var(--azul);
@@ -28,7 +28,7 @@
         }
 
         .faq-question {
-            padding: 20px;
+            padding: 22px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -38,17 +38,21 @@
         }
 
         .faq-answer {
-            padding: 0 20px;
+            padding: 0 22px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            transition: all 0.3s ease-in-out;
             color: #555;
             background: #fdfdfd;
         }
 
+        .faq-item.active {
+            border-left-color: var(--rojo);
+        }
+
         .faq-item.active .faq-answer {
-            max-height: 200px;
-            padding: 0 20px 20px 20px;
+            max-height: 250px;
+            padding: 0 22px 22px 22px;
         }
 
         .faq-item.active .fa-chevron-down {
@@ -71,57 +75,60 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="faq.html" class="active">Preguntas Frecuentes</a></li>
-                <li><a href="cotizar.html">Cotizar</a></li>
                 <li><a href="asistencia.html" class="asistencia-btn">Asistencia 24/7</a></li>
+                <li><a href="faq.html" class="active">Preguntas Frecuentes</a></li>
+                <li><a href="seguros.html">Productos</a></li>
+                <li><a href="cotizar.html">Cotizar</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="faq-container animate__animated animate__fadeInUp">
+    <main class="faq-main animate__animated animate__fadeInUp">
         <div class="section-title">
             <h2>Preguntas Frecuentes</h2>
             <div class="underline"></div>
-            <p style="text-align: center; color: #777;">Resolvemos tus dudas sobre seguros de forma clara y rápida.</p>
+            <p style="text-align: center; color: #777; margin-bottom: 40px;">Todo lo que necesitas saber sobre tus seguros y nuestra asesoría.</p>
         </div>
 
-        <div class="faq-item">
-            <div class="faq-question">
-                ¿Qué documentos necesito para cotizar mi seguro de auto?
-                <i class="fas fa-chevron-down"></i>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿Qué documentos necesito para cotizar mi seguro vehicular?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Para una cotización precisa, solo necesitamos los datos básicos del vehículo: marca, modelo, año y el valor comercial estimado. En algunos casos, el número de placa ayuda a verificar beneficios adicionales.</p>
+                </div>
             </div>
-            <div class="faq-answer">
-                <p>Para brindarte una cotización exacta necesitamos el número de placa de tu vehículo o el año, marca y modelo específico. También es útil conocer tu historial de conducción para aplicar descuentos especiales.</p>
-            </div>
-        </div>
 
-        <div class="faq-item">
-            <div class="faq-question">
-                ¿La asesoría de iSeguros tiene algún costo?
-                <i class="fas fa-chevron-down"></i>
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿La asesoría de iSeguros tiene algún costo extra?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>No, nuestra asesoría técnica y el acompañamiento durante la vigencia de tu póliza no tienen costo para ti. Recibimos nuestra gestión directamente por parte de las aseguradoras del país.</p>
+                </div>
             </div>
-            <div class="faq-answer">
-                <p>¡No! Nuestra asesoría técnica, comparativos de precios y el acompañamiento en caso de siniestros son totalmente gratuitos para ti como cliente. Nosotros recibimos nuestra gestión directamente de las aseguradoras.</p>
-            </div>
-        </div>
 
-        <div class="faq-item">
-            <div class="faq-question">
-                ¿Qué hago si tengo un choque o emergencia médica?
-                <i class="fas fa-chevron-down"></i>
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿Cómo procedo en caso de un siniestro o accidente?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Lo primero es mantener la calma. Debes comunicarte de inmediato con los números que aparecen en nuestra sección de <strong>Asistencia 24/7</strong> para reportar el evento y recibir instrucciones claras de tu aseguradora.</p>
+                </div>
             </div>
-            <div class="faq-answer">
-                <p>Mantén la calma y comunícate de inmediato a los números de nuestra sección de <strong>Asistencia 24/7</strong>. Te guiaremos paso a paso para que recibas atención oportuna y gestiones el reporte con tu aseguradora.</p>
-            </div>
-        </div>
 
-        <div class="faq-item">
-            <div class="faq-question">
-                ¿Cómo puedo pagar mi póliza de seguro?
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>Aceptamos pagos con tarjeta de crédito (diferidos disponibles según la aseguradora), transferencias bancarias directas o débito automático de tu cuenta corriente o ahorros.</p>
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿Con qué aseguradoras trabajan?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Trabajamos con las compañías más sólidas del mercado ecuatoriano, incluyendo AIG Metropolitana, SaludSA, Sweaden, Zurich, Generali y Vaz Seguros.</p>
+                </div>
             </div>
         </div>
     </main>
@@ -135,15 +142,15 @@
     </a>
 
     <script>
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                item.classList.toggle('active');
-                
-                // Cerrar otros si se abre uno nuevo
-                document.querySelectorAll('.faq-item').forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+
+                // Cerrar otros al abrir uno nuevo
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
                     }
                 });
             });
