@@ -642,3 +642,35 @@ p { margin-top: 0; }
     box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     transform: translateY(-2px);
 }
+
+
+.asistencia-hero-slim {
+    background: var(--rojo);
+    color: white;
+    padding: 20px 15px; /* Reducido para que sea más delgada */
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 25px;
+}
+
+.asistencia-hero-slim h1 {
+    font-size: 1.4rem; /* Texto más pequeño */
+    margin-bottom: 2px;
+}
+
+.asistencia-hero-slim p {
+    font-size: 0.85rem; /* Párrafo más discreto */
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+/* Ajuste del buscador para que no se vea amontonado */
+.search-container {
+    max-width: 400px; /* Un poco más angosto */
+    margin: 10px auto 0;
+}
+
+#busquedaAseguradora {
+    padding: 8px 15px 8px 40px; /* Input más esbelto */
+    font-size: 0.9rem;
+}
