@@ -2,65 +2,173 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Nuestros Seguros | iSeguros</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Productos | iSeguros</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .products-hero {
+            background: linear-gradient(rgba(0, 97, 175, 0.85), rgba(0, 97, 175, 0.85)), 
+                        url('https://images.unsplash.com/photo-1454165833767-0266b196773b?q=80&w=1200&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .products-hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .product-card-full {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .product-card-full:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .product-image-box {
+            height: 200px;
+            background-color: var(--azul-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .product-info {
+            padding: 30px;
+        }
+
+        .product-info h3 {
+            color: var(--azul);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .product-info p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-more-info {
+            display: inline-block;
+            color: var(--rojo);
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            border-bottom: 2px solid var(--rojo);
+            transition: 0.3s;
+        }
+
+        .btn-more-info:hover {
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .products-hero h1 { font-size: 1.8rem; }
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <div class="logo-container"><img src="logo.png" alt="iSeguros"></div>
+        <div class="logo-container animate__animated animate__fadeIn">
+            <img src="logo.png" alt="iSeguros Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                <li><a href="seguros.html" class="active">Seguros</a></li>
-                <li><a href="aseguradoras.html">Aseguradoras</a></li>
-                <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="asistencia.html" class="asistencia-btn">Asistencia 24/7</a></li>
+                <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="seguros.html" class="active">Productos</a></li>
+                <li><a href="cotizar.html">Cotizar</a></li>
             </ul>
         </nav>
     </header>
 
-    <main style="padding: 60px 10%;">
-        <h2 style="text-align:center; color: var(--azul-corporativo); margin-bottom: 40px;">Protección a tu medida</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-            <div class="card-seguro animate__animated animate__fadeInUp">
-                <i class="fas fa-car" style="font-size: 3rem; color: var(--azul-corporativo);"></i>
-                <h3>Vehicular</h3>
-                <p>Cobertura completa contra choques, robo total o parcial y asistencia vial las 24 horas.</p>
+    <section class="products-hero animate__animated animate__fadeIn">
+        <h1>Nuestras Soluciones de Protección</h1>
+        <p>Expertos en encontrar el seguro ideal para cada necesidad.</p>
+    </section>
+
+    <main class="container section-padding">
+        <div class="product-detail-grid">
+            
+            <div class="product-card-full animate__animated animate__fadeInUp">
+                <div class="product-image-box" style="background: #e3f2fd; color: #1976d2;">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Seguro Vehicular</h3>
+                    <p>Protección contra daños propios, robo total y responsabilidad civil. Incluye asistencia mecánica y grúa nacional.</p>
+                    <a href="cotizar.html" class="btn-more-info">Solicitar Cotización</a>
+                </div>
             </div>
-            <div class="card-seguro animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                <i class="fas fa-heartbeat" style="font-size: 3rem; color: var(--azul-corporativo);"></i>
-                <h3>Salud</h3>
-                <p>Planes de medicina prepagada con acceso a las mejores redes hospitalarias del país.</p>
+
+            <div class="product-card-full animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+                <div class="product-image-box" style="background: #fce4ec; color: #c2185b;">
+                    <i class="fas fa-user-nurse"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Seguro de Salud</h3>
+                    <p>Acceso a medicina prepagada con cobertura para hospitalización, consultas externas y farmacias a nivel nacional.</p>
+                    <a href="cotizar.html" class="btn-more-info">Solicitar Cotización</a>
+                </div>
             </div>
-            <div class="card-seguro animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
-                <i class="fas fa-home" style="font-size: 3rem; color: var(--azul-corporativo);"></i>
-                <h3>Hogar</h3>
-                <p>Protege tu patrimonio ante incendios, inundaciones, robos y daños eléctricos.</p>
+
+            <div class="product-card-full animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                <div class="product-image-box" style="background: #e8f5e9; color: #388e3c;">
+                    <i class="fas fa-home-heart"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Seguro de Hogar</h3>
+                    <p>Respaldo total ante incendios, inundaciones, robos y asistencia técnica para reparaciones del hogar.</p>
+                    <a href="cotizar.html" class="btn-more-info">Solicitar Cotización</a>
+                </div>
             </div>
-            <div class="card-seguro animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
-                <i class="fas fa-briefcase" style="font-size: 3rem; color: var(--azul-corporativo);"></i>
-                <h3>Empresarial</h3>
-                <p>Soluciones para pequeñas y grandes empresas: multiriesgo, responsabilidad civil y más.</p>
+
+            <div class="product-card-full animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                <div class="product-image-box" style="background: #fff3e0; color: #f57c00;">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Seguro de Vida</h3>
+                    <p>Asegura el futuro financiero de tus seres queridos con planes flexibles y coberturas adicionales de accidentes.</p>
+                    <a href="cotizar.html" class="btn-more-info">Solicitar Cotización</a>
+                </div>
             </div>
+
         </div>
     </main>
 
-    <style>
-        .card-seguro {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-        .card-seguro:hover { transform: translateY(-10px); border-bottom: 5px solid var(--azul-corporativo); }
-        .card-seguro h3 { margin: 20px 0; color: var(--azul-corporativo); }
-    </style>
+    <footer>
+        <p>&copy; 2026 iSeguros | Expertos en Protección | Cuenca, Ecuador</p>
+    </footer>
+
+    <a href="https://wa.me/593987801917" class="wsp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
 </body>
 </html>
