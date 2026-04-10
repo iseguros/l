@@ -906,3 +906,57 @@ nav ul li a:hover:not(.active) {
     transform: scale(1.3); /* Esto lo agranda un 30% extra de forma interna */
     transition: transform 0.3s ease;
 }
+
+
+/* =========================================
+   AJUSTE ESPECÍFICO SECCIÓN PRODUCTOS
+   ========================================= */
+
+/* 1. Reducir el ancho (height) de la barra azul */
+.productos-hero { /* Asegúrate de que este sea el nombre de tu clase en el HTML */
+    background-color: var(--azul);
+    padding: 60px 20px; /* Reducido de 80vh o valores altos a un padding fijo */
+    min-height: auto;   /* Quita alturas mínimas excesivas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* 2. Centrar el contenido y limitar su ancho para que no toque los bordes */
+.productos-content {
+    max-width: 850px; /* Limita el ancho del texto para que se vea centrado y elegante */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 3. Ajustar el tamaño del título (que no sea tan grande) */
+.productos-content h1 {
+    font-size: 2.2rem; /* Tamaño más moderado que el del Inicio */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--blanco);
+}
+
+/* 4. Ajustar el párrafo para que no llegue a los márgenes */
+.productos-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 750px; /* Un poco más estrecho que el contenedor padre */
+    margin: 0 auto;  /* Centra el bloque del párrafo */
+    color: rgba(255, 255, 255, 0.9); /* Blanco suavizado */
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .productos-hero {
+        padding: 40px 15px;
+    }
+    .productos-content h1 {
+        font-size: 1.6rem;
+    }
+    .productos-content p {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+}
