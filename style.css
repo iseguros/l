@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --azul: #0a2a66;
+    --azul2: #1c4ed8;
+    --gris: #f4f6f9;
+}
+
+/* NAV */
+header {
+    background: var(--azul);
+    padding: 15px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #90b4ff;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(to right, var(--azul), var(--azul2));
+    color: white;
+    padding: 100px 40px;
+}
+
+/* SECCIONES */
+section {
+    padding: 60px 40px;
+}
+
+h2 {
+    color: var(--azul);
+    text-align: center;
+}
+
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* BOTON */
+.btn {
+    background: white;
+    color: var(--azul);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--azul);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
