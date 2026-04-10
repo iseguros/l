@@ -2,9 +2,9 @@
    VARIABLES Y CONFIGURACIÓN GLOBAL
    ========================================= */
 :root {
-    --azul: #0061af; /* Azul de tu logo */
+    --azul: #0061af; 
     --azul-dark: #004a87;
-    --rojo: #ff4b2b; /* Rojo de urgencia/asistencia */
+    --rojo: #ff4b2b; 
     --blanco: #ffffff;
     --gris-fondo: #f8f9fa;
     --texto-oscuro: #333333;
@@ -46,7 +46,6 @@ header {
 .logo-container img {
     max-width: 240px;
     height: auto;
-    /* Mejora la integración del logo si tiene fondo */
     mix-blend-mode: multiply; 
 }
 
@@ -61,7 +60,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Importante para móviles */
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -83,7 +82,6 @@ nav ul li a.active {
     color: #00d9ff;
 }
 
-/* BOTÓN ASISTENCIA (ORDEN 1) */
 .asistencia-btn {
     background-color: var(--rojo) !important;
     padding: 8px 16px;
@@ -99,7 +97,7 @@ nav ul li a.active {
 }
 
 /* =========================================
-   HERO SECTION (PORTADA)
+   HERO SECTION
    ========================================= */
 .hero {
     height: 75vh;
@@ -119,7 +117,6 @@ nav ul li a.active {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
-    line-height: 1.2;
 }
 
 .hero p {
@@ -141,37 +138,36 @@ nav ul li a.active {
 .btn-primary { background: var(--rojo); color: white; }
 .btn-emergency { background: white; color: var(--rojo); }
 
-.btn-primary:hover, .btn-emergency:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
 /* =========================================
-   SECCIONES GENERALES
+   SECCIONES Y CORRECCIÓN DE TÍTULOS
    ========================================= */
 .section-padding { padding: 80px 0; }
 .container { width: 90%; max-width: 1100px; margin: auto; }
-.section-title { text-align: center; margin-bottom: 50px; }
-.section-title h2 { font-size: 2.2rem; color: var(--azul); font-weight: 700; text-transform: uppercase; }
-.underline { width: 50px; height: 4px; background: var(--rojo); margin: 10px auto; }
-.bg-light { background-color: var(--gris-fondo); }
 
-/* SOBRE NOSOTROS (FLEX) */
-.about-flex {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
+.section-title { 
+    text-align: center; 
+    margin-bottom: 50px; 
+    position: relative; /* Para control de la línea */
 }
 
-.about-text, .about-image { flex: 1; min-width: 300px; }
-.about-image img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.section-title h2 { 
+    font-size: 2.2rem; 
+    color: var(--azul); 
+    font-weight: 700; 
+    text-transform: uppercase; 
+}
 
-.check-list { list-style: none; margin-top: 20px; }
-.check-list li { margin-bottom: 12px; font-weight: 600; display: flex; align-items: center; }
-.check-list i { color: var(--rojo); margin-right: 12px; font-size: 1.2rem; }
+/* La línea roja ahora se comporta correctamente debajo del H2 */
+.underline { 
+    width: 50px; 
+    height: 4px; 
+    background: var(--rojo); 
+    margin: 10px auto 20px; /* Margen inferior para separar del párrafo */
+}
 
-/* PRODUCTOS (GRID) */
+.bg-light { background-color: var(--gris-fondo); }
+
+/* GRID DE PRODUCTOS */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -187,33 +183,10 @@ nav ul li a.active {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
 .service-card i {
     font-size: 3rem;
     color: var(--azul);
     margin-bottom: 20px;
-}
-
-/* ASEGURADORAS */
-.partners-flex {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.partner-box {
-    background: white;
-    border: 1px solid #ddd;
-    padding: 20px 30px;
-    border-radius: 8px;
-    font-weight: bold;
-    color: #888;
-    text-transform: uppercase;
 }
 
 /* CONTACTO STRIP */
@@ -230,17 +203,12 @@ nav ul li a.active {
     text-align: center;
 }
 
-.contact-box i { font-size: 2rem; color: var(--rojo); margin-bottom: 15px; }
-
-/* =========================================
-   FOOTER Y BOTÓN FLOTANTE
-   ========================================= */
+/* FOOTER Y WHATSAPP */
 footer {
     background-color: #111;
     color: #999;
     padding: 30px;
     text-align: center;
-    font-size: 0.9rem;
 }
 
 .wsp-float {
@@ -256,31 +224,26 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     z-index: 2000;
-    transition: var(--transicion);
 }
 
-.wsp-float:hover { transform: scale(1.1); }
-
 /* =========================================
-   RESPONSIVO (MÓVILES)
+   RESPONSIVO (CELULARES)
    ========================================= */
 @media (max-width: 768px) {
     header { padding-top: 15px; }
-    .logo-container img { max-width: 200px; }
+    
+    /* Corrección: Logo más pequeño para que no rompa el menú */
+    .logo-container img { max-width: 180px; }
     
     nav ul {
-        flex-direction: column; /* Menú vertical en móvil */
+        flex-direction: column; 
         padding-bottom: 10px;
     }
     
     nav ul li { margin: 8px 0; }
     
-    .hero h1 { font-size: 2.2rem; }
-    .hero p { font-size: 1rem; }
-    
-    .section-padding { padding: 50px 0; }
-    .about-flex { flex-direction: column-reverse; text-align: center; }
-    .check-list li { justify-content: center; }
+    /* Ajuste de texto en móvil */
+    .hero h1 { font-size: 2rem; }
+    .section-title h2 { font-size: 1.8rem; }
 }
