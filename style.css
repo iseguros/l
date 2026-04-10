@@ -358,3 +358,83 @@ footer {
         font-size: 0.9rem;
     }
 }
+
+
+/* =========================================
+   ESTILOS DE UBICACIÓN Y FOOTER
+   ========================================= */
+
+/* Contenedor del Mapa */
+.map-container {
+    width: 100%;
+    border-radius: 15px; /* Mismo redondeado que tus tarjetas de productos */
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra premium */
+    margin-top: 20px;
+    border: 1px solid #eee;
+}
+
+.address-text {
+    color: var(--texto-suave);
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.address-text i {
+    color: var(--rojo); /* Icono de ubicación en rojo corporativo */
+    margin-right: 8px;
+}
+
+/* Footer Principal */
+.main-footer {
+    background-color: var(--azul-dark);
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilo de Redes Sociales */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: var(--transicion);
+}
+
+.social-icon:hover {
+    background: var(--rojo); /* Cambio a rojo al pasar el mouse */
+    transform: translateY(-3px);
+    color: white;
+}
+
+/* Ajustes para Celular */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .map-container iframe {
+        height: 300px; /* Mapa más pequeño en móviles */
+    }
+}
