@@ -589,3 +589,56 @@ p { margin-top: 0; }
         background-color: rgba(37, 211, 102, 0.5) !important; /* Más transparente */
     }
 }
+
+
+/* Sección roja optimizada */
+.asistencia-header {
+    background: linear-gradient(135deg, #ff4d29, #e63e1c); /* Gradiente para un look más premium */
+    color: white;
+    padding: 25px 20px; /* Reducción de espacio para que sea delgado */
+    text-align: center;
+}
+
+.asistencia-header h2 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.asistencia-header p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+/* Buscador moderno */
+.search-container {
+    max-width: 450px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-container i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+#busquedaAseguradora {
+    width: 100%;
+    padding: 10px 15px 10px 45px;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    outline: none;
+    transition: 0.3s;
+}
+
+#busquedaAseguradora:focus {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    transform: translateY(-2px);
+}
