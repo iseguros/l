@@ -438,3 +438,32 @@ footer {
         height: 300px; /* Mapa más pequeño en móviles */
     }
 }
+
+/* =========================================
+   CORRECCIÓN DE LISTA "SOBRE NOSOTROS"
+   ========================================= */
+
+.about-text ul {
+    list-style: none; /* Quita los puntos negros por defecto */
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los checks con el párrafo superior */
+    text-align: left; /* Mantiene el texto de cada item hacia la izquierda */
+}
+
+.about-text ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--texto-oscuro);
+    width: fit-content; /* Asegura que el centrado sea sobre el contenido real */
+}
+
+.about-text ul li i {
+    color: var(--azul); /* O el color de tu marca para el check */
+    font-size: 1.1rem;
+}
