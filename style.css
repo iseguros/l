@@ -1,51 +1,55 @@
 :root {
-    --azul-corporativo: #004aad;
-    --azul-claro: #00c2cb;
-    --rojo-alerta: #e74c3c;
+    --azul-corporativo: #0061af; /* El azul de tu logo */
+    --azul-oscuro: #004a87;
+    --rojo-alerta: #ff4b2b;
     --blanco: #ffffff;
-    --gris-claro: #f8f9fa;
-    --oscuro: #2c3e50;
+    --gris-fondo: #f4f7fb;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--oscuro);
-    background: var(--blanco);
+    background-color: var(--gris-fondo);
 }
 
-/* HEADER CENTRADO Y NAVEGACIÓN (Se mantiene en todas las páginas) */
+/* HEADER Y NAVEGACIÓN - BLOQUE AZUL SÓLIDO */
 header {
-    background: var(--blanco);
-    padding: 20px 0 0 0;
+    background-color: var(--azul-corporativo);
+    padding-top: 25px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.logo-container {
+    padding-bottom: 20px;
 }
 
 .logo-container img {
-    max-width: 250px;
+    max-width: 320px; /* Tamaño impactante */
     height: auto;
-    margin-bottom: 15px;
+    /* Esto ayuda si el logo tiene un fondo azul ligeramente diferente */
+    mix-blend-mode: multiply; 
 }
 
 nav {
-    background: var(--azul-corporativo);
-    padding: 12px 0;
+    background-color: var(--azul-corporativo);
+    padding: 15px 0;
+    border-top: 1px solid rgba(255,255,255,0.1); /* Línea muy sutil para separar */
 }
 
 nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style: none;
     flex-wrap: wrap;
 }
 
@@ -59,19 +63,22 @@ nav ul li a {
     font-weight: 600;
     font-size: 0.85rem;
     text-transform: uppercase;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: var(--azul-claro);
+    color: #00d9ff; /* Un celeste brillante para resaltar donde estás */
 }
 
 /* BOTÓN ASISTENCIA ROJO */
-.asistencia-btn {
-    background: var(--rojo-alerta);
-    padding: 8px 15px;
+nav ul li a.asistencia-btn {
+    background-color: var(--rojo-alerta);
+    padding: 10px 22px;
     border-radius: 5px;
+    color: white !important;
     animation: pulse 2s infinite;
+    box-shadow: 0 4px 10px rgba(255, 75, 43, 0.4);
 }
 
 @keyframes pulse {
@@ -80,37 +87,90 @@ nav ul li a:hover, nav ul li a.active {
     100% { transform: scale(1); }
 }
 
-/* CONTENIDO DE LAS SECCIONES */
-.content-wrapper {
-    padding: 60px 10%;
-    min-height: 70vh;
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-footer {
-    background: var(--azul-corporativo);
+/* HERO SECTION - INICIO */
+.hero-section {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
-    padding: 30px;
 }
 
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background: var(--rojo-alerta);
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.btn-secondary {
+    background: var(--azul-corporativo);
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer {
+    background: var(--azul-oscuro);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* WHATSAPP FLOTANTE */
 .wsp-float {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 30px;
+    right: 30px;
     background: #25d366;
     color: white;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 28px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.wsp-float:hover {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.2rem; }
+    nav ul { flex-direction: column; }
+    nav ul li { margin: 10px 0; }
 }
