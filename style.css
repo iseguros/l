@@ -1073,3 +1073,20 @@ nav ul li a:hover:not(.active) {
     gap: 20px;               /* Espacio entre botones */
     margin-top: 30px;
 }
+
+
+/* Busca tu sección hero y ajusta su altura */
+.hero {
+    /* ... otras propiedades existentes (background, flexbox, text-align, etc.) ... */
+    
+    /* Cambia la altura actual por una más compacta. 
+       Aproximadamente 55vh-60vh reducirá la altura a 2/3 de su tamaño original si antes era 100vh. */
+    height: 60vh; /* Ajusta este valor (vh o px) según tus preferencias exactas */
+    min-height: auto; /* Asegúrate de desactivar min-height si ya tenías uno */
+
+    /* Importante: Mantén flexbox activado y alineado para que el texto siga centrado verticalmente con la nueva altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
