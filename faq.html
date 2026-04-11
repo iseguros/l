@@ -1,13 +1,111 @@
-<div class="faq-list">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes | iSeguros</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .faq-main {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-left: 5px solid var(--azul);
+            transition: 0.3s;
+        }
+
+        .faq-question {
+            padding: 22px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--azul-dark);
+        }
+
+        .faq-answer {
+            padding: 0 22px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            color: #555;
+            background: #fdfdfd;
+        }
+
+        .faq-item.active {
+            border-left-color: var(--rojo);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px; /* Aumentado para respuestas largas */
+            padding: 0 22px 22px 22px;
+        }
+
+        .faq-item.active .fa-chevron-down {
+            transform: rotate(180deg);
+            color: var(--rojo);
+        }
+
+        .fa-chevron-down {
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container animate__animated animate__fadeIn">
+            <img src="logo.png" alt="iSeguros Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="asistencia.html" class="asistencia-btn">Asistencia 24/7</a></li>
+                <li><a href="faq.html" class="active">Preguntas Frecuentes</a></li>
+                <li><a href="seguros.html">Productos</a></li>
+                <li><a href="cotizar.html">Cotizar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="faq-main animate__animated animate__fadeInUp">
+        <div class="section-title">
+            <h2 style="text-align: center;">Preguntas Frecuentes</h2>
+            <div class="underline"></div>
+            <p style="text-align: center; color: #777; margin-bottom: 40px;">Todo lo que necesitas saber sobre tus seguros y nuestra asesoría.</p>
+        </div>
+
+        <div class="faq-list">
             <div class="faq-item">
                 <div class="faq-question">
                     ¿Qué debo hacer en caso de un siniestro o accidente?
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Mantén la calma y sigue estos tres pasos clave: 
-                    1. <strong>Documenta:</strong> Toma fotos de los daños y el lugar desde varios ángulos. 
-                    2. <strong>Informa:</strong> Indica a los involucrados que cuentas con seguro. 
+                    <p>Mantén la calma y sigue estos tres pasos clave: <br>
+                    1. <strong>Documenta:</strong> Toma fotos de los daños y el lugar desde varios ángulos. <br>
+                    2. <strong>Informa:</strong> Indica a los involucrados que cuentas con seguro. <br>
                     3. <strong>Llámanos:</strong> Contacta a tu asesor de iSeguros de inmediato; atendemos las 24 horas para guiarte y asegurar que recibas atención sin demora.</p>
                 </div>
             </div>
@@ -28,9 +126,9 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Requerimos datos mínimos según el plan: 
-                    <strong>Vehículos:</strong> Cédula, placa y valor comercial estimado. 
-                    <strong>Salud:</strong> Edad, ciudad y condiciones previas. 
+                    <p>Requerimos datos mínimos según el plan: <br>
+                    <strong>Vehículos:</strong> Cédula, placa y valor comercial estimado. <br>
+                    <strong>Salud:</strong> Edad, ciudad y condiciones previas. <br>
                     <strong>Hogar:</strong> Dirección y valor estimado de tus bienes.</p>
                 </div>
             </div>
@@ -125,3 +223,32 @@
                 </div>
             </div>
         </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 iSeguros | Resolviendo tus dudas en Cuenca, Ecuador</p>
+    </footer>
+
+    <a href="https://wa.me/593987801917" class="wsp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                
+                // Toggle activo
+                faqItem.classList.toggle('active');
+
+                // Cerrar otros al abrir uno nuevo
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
