@@ -1116,6 +1116,9 @@ nav ul li a:hover:not(.active) {
         text-align: center;
     }
 
+
+
+   
     /* 3. Ajuste de iconos y textos internos */
     .producto-card i {
         font-size: 1.8rem; /* Icono un poco más pequeño para que quepa bien */
@@ -1135,4 +1138,26 @@ nav ul li a:hover:not(.active) {
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
+}
+
+
+
+
+/* =========================================
+   HEADER COMPACTO Y ELEGANTE
+   ========================================= */
+
+header {
+    padding: 10px 0; /* Reducimos el espacio arriba y abajo del logo */
+    background-color: var(--azul); /* Mantiene tu color corporativo */
+}
+
+.logo-container img {
+    height: 60px; /* Ajusta este valor según prefieras, 50px-60px suele ser el estándar premium */
+    width: auto;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    margin-top: 5px; /* Acerca un poco más el menú al logo para que todo se vea como una sola unidad */
 }
