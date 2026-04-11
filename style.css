@@ -1092,67 +1092,79 @@ nav ul li a:hover:not(.active) {
 }
 
 /* =========================================
-   SOLUCIÓN DEFINITIVA PRODUCTOS (2 EN 2)
+   RESTAURACIÓN DE DISEÑO Y 2x2 EN MÓVIL
    ========================================= */
 
-/* 1. Ajuste del contenedor principal */
 .productos-container {
     display: grid !important;
-    /* Crea dos columnas iguales de 1 fracción cada una */
-    grid-template-columns: repeat(2, 1fr) !important; 
-    gap: 15px !important;
-    padding: 15px !important;
-    max-width: 1100px;
+    grid-template-columns: repeat(2, 1fr) !important; /* Siempre 2 columnas */
+    gap: 20px !important;
+    padding: 20px !important;
+    max-width: 1200px;
     margin: 0 auto;
-    /* Desactivamos el flex-direction que tenías para que el Grid tome el control */
-    flex-direction: unset !important; 
 }
 
-/* 2. Ajuste de las tarjetas individuales */
+/* Recuperamos el diseño cuadrado y colorido */
 .producto-card {
-    /* Quitamos el 90% de ancho para que el Grid maneje el espacio */
-    width: 100% !important; 
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 20px 10px !important;
-    /* Altura mínima para igualar a las aseguradoras */
-    min-height: 180px !important; 
+    background: #ffffff !important; /* Fondo blanco */
+    border-radius: 15px !important; /* Bordes redondeados */
+    padding: 25px 15px !important;
+    text-align: center !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    box-sizing: border-box !important;
+    
+    /* Restauramos la sombra y el borde izquierdo colorido */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 4px solid var(--azul) !important; /* Línea de color abajo para estilo premium */
+    transition: transform 0.3s ease !important;
 }
 
-/* 3. Ajustes de texto para móvil */
+/* Efecto al pasar el mouse (opcional para PC) */
+.producto-card:hover {
+    transform: translateY(-5px) !important;
+}
+
+/* Iconos */
+.producto-card i {
+    font-size: 2.5rem !important;
+    color: var(--azul) !important;
+    margin-bottom: 15px !important;
+}
+
+/* Títulos */
+.producto-card h3 {
+    font-size: 1.2rem !important;
+    color: #333 !important;
+    margin-bottom: 10px !important;
+    font-weight: 700 !important;
+}
+
+/* Descripciones */
+.producto-card p {
+    font-size: 0.85rem !important;
+    color: #666 !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+}
+
+/* Ajuste específico para pantallas muy pequeñas */
 @media (max-width: 480px) {
     .productos-container {
-        gap: 10px !important;
+        gap: 12px !important;
         padding: 10px !important;
+    }
+    
+    .producto-card {
+        padding: 15px 10px !important;
+        min-height: 160px !important;
     }
 
     .producto-card i {
-        font-size: 2rem !important;
-        margin-bottom: 10px !important;
-    }
-
-    .producto-card h3 {
-        font-size: 0.95rem !important;
-        margin-bottom: 5px !important;
-    }
-
-    .producto-card p {
-        font-size: 0.75rem !important;
-        line-height: 1.2 !important;
-        /* Limita el texto a 3 líneas para que todas las cajas midan lo mismo */
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        font-size: 1.8rem !important;
     }
 }
-
-
 
 
 /* =========================================
