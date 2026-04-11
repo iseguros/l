@@ -1043,3 +1043,20 @@ nav ul li a:hover:not(.active) {
         margin-top: 20px;
     }
 }
+
+/* =========================================
+   CENTRAR TEXTO SECCIÓN PRODUCTOS
+   ========================================= */
+
+.productos-content {
+    width: 90%;          /* Asegura espacio en pantallas pequeñas */
+    max-width: 850px;    /* Evita que el texto se estire demasiado en monitores grandes */
+    margin: 0 auto;      /* El truco principal para centrar el bloque horizontalmente */
+    text-align: center;  /* Centra cada línea de texto internamente */
+}
+
+.productos-content p {
+    margin: 0 auto;      /* Centra el bloque del párrafo */
+    max-width: 750px;    /* Hace que el párrafo sea un poco más estrecho para facilitar la lectura */
+    line-height: 1.6;    /* Mejora el espacio entre líneas */
+}
