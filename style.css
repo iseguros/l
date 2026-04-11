@@ -1045,18 +1045,31 @@ nav ul li a:hover:not(.active) {
 }
 
 /* =========================================
-   CENTRAR TEXTO SECCIÓN PRODUCTOS
+   CENTRAR CONTENIDO HERO (INDEX)
    ========================================= */
 
-.productos-content {
-    width: 90%;          /* Asegura espacio en pantallas pequeñas */
-    max-width: 850px;    /* Evita que el texto se estire demasiado en monitores grandes */
-    margin: 0 auto;      /* El truco principal para centrar el bloque horizontalmente */
-    text-align: center;  /* Centra cada línea de texto internamente */
+.hero {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;     /* Centra el contenido verticalmente */
+    text-align: center;      /* Centra el texto de cada línea */
+    min-height: 80vh;        /* Ajusta la altura de la sección */
+    padding: 0 20px;
 }
 
-.productos-content p {
-    margin: 0 auto;      /* Centra el bloque del párrafo */
-    max-width: 750px;    /* Hace que el párrafo sea un poco más estrecho para facilitar la lectura */
-    line-height: 1.6;    /* Mejora el espacio entre líneas */
+.hero-content {
+    max-width: 900px;        /* Limita el ancho para que el texto no llegue a los bordes */
+    margin: 0 auto;          /* Asegura el centrado del bloque */
+}
+
+.hero-content p {
+    margin: 20px auto;       /* Centra el párrafo y le da espacio arriba/abajo */
+    max-width: 700px;        /* Hace que el párrafo sea más elegante y legible */
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center; /* Centra los botones de Cotizar y Emergencias */
+    gap: 20px;               /* Espacio entre botones */
+    margin-top: 30px;
 }
