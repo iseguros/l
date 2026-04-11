@@ -991,3 +991,55 @@ nav ul li a:hover:not(.active) {
     margin-top: 5px !important;
     margin-bottom: 10px !important;
 }
+
+/* =========================================
+   ESTILOS PARA EL CARRUSEL (SOBRE NOSOTROS)
+   ========================================= */
+
+/* Contenedor principal de la imagen */
+.about-image.about-slideshow {
+    position: relative;
+    width: 100%;
+    min-height: 400px; /* Ajusta según la altura de tu foto principal */
+    overflow: hidden;
+    border-radius: 20px; /* Bordes redondeados premium */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para cada una de las imágenes */
+.about-image .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la foto se estire feo */
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out; /* Transición suave */
+    z-index: 1;
+}
+
+/* Clase para la imagen que se está mostrando */
+.about-image .slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Animación de desvanecimiento (Fade) */
+.fade {
+    animation-name: fadeEffect;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Ajuste para móviles: que no se vea tan alto */
+@media (max-width: 768px) {
+    .about-image.about-slideshow {
+        min-height: 250px;
+        margin-top: 20px;
+    }
+}
