@@ -1092,49 +1092,61 @@ nav ul li a:hover:not(.active) {
 }
 
 /* =========================================
-   AJUSTE DE PRODUCTOS PARA MÓVIL (2 EN 2)
+   SOLUCIÓN DEFINITIVA PRODUCTOS (2 EN 2)
    ========================================= */
 
-@media (max-width: 768px) {
-    /* 1. Contenedor de las tarjetas */
-    .productos-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Crea dos columnas iguales */
-        gap: 15px; /* Espacio entre los recuadros */
-        padding: 10px;
+/* 1. Ajuste del contenedor principal */
+.productos-container {
+    display: grid !important;
+    /* Crea dos columnas iguales de 1 fracción cada una */
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 15px !important;
+    padding: 15px !important;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* Desactivamos el flex-direction que tenías para que el Grid tome el control */
+    flex-direction: unset !important; 
+}
+
+/* 2. Ajuste de las tarjetas individuales */
+.producto-card {
+    /* Quitamos el 90% de ancho para que el Grid maneje el espacio */
+    width: 100% !important; 
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 20px 10px !important;
+    /* Altura mínima para igualar a las aseguradoras */
+    min-height: 180px !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+}
+
+/* 3. Ajustes de texto para móvil */
+@media (max-width: 480px) {
+    .productos-container {
+        gap: 10px !important;
+        padding: 10px !important;
     }
 
-    /* 2. Ajuste de cada tarjeta de producto */
-    .producto-card {
-        padding: 15px 10px; /* Reduce el espacio interno */
-        margin: 0; /* Elimina márgenes que puedan empujar la tarjeta */
-        min-height: 180px; /* Altura similar a las de aseguradoras */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-
-
-   
-    /* 3. Ajuste de iconos y textos internos */
     .producto-card i {
-        font-size: 1.8rem; /* Icono un poco más pequeño para que quepa bien */
-        margin-bottom: 10px;
+        font-size: 2rem !important;
+        margin-bottom: 10px !important;
     }
 
     .producto-card h3 {
-        font-size: 1rem; /* Título compacto */
-        margin-bottom: 5px;
+        font-size: 0.95rem !important;
+        margin-bottom: 5px !important;
     }
 
     .producto-card p {
-        font-size: 0.8rem; /* Texto más pequeño para no alargar la tarjeta */
-        line-height: 1.2;
+        font-size: 0.75rem !important;
+        line-height: 1.2 !important;
+        /* Limita el texto a 3 líneas para que todas las cajas midan lo mismo */
         display: -webkit-box;
-        -webkit-line-clamp: 3; /* Limita a 3 líneas de texto para mantener uniformidad */
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
