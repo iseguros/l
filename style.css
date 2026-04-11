@@ -1173,3 +1173,12 @@ header {
 nav ul {
     margin-top: 5px; /* Acerca un poco más el menú al logo para que todo se vea como una sola unidad */
 }
+
+
+
+.brand-highlight {
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+}
