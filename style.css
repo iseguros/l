@@ -960,31 +960,34 @@ nav ul li a:hover:not(.active) {
     .productos-content h1 { font-size: 1.7rem; }
     .productos-content p { font-size: 0.95rem; }
 }
-
 /* =========================================
-   REDUCIR ESPACIO ENTRE TEXTO Y RECUADROS
+   REDUCCIÓN MÁXIMA DE ESPACIO (ULTRA COMPACTO)
    ========================================= */
 
-/* 1. Ajustamos la sección del texto */
+/* 1. Quitamos el espacio inferior del texto de productos */
 .productos-hero {
-    padding-bottom: 20px !important; /* Reducimos el espacio de abajo del texto */
-    margin-bottom: 0 !important;      /* Eliminamos márgenes externos */
+    padding-bottom: 5px !important;  /* Casi nada de espacio abajo */
+    margin-bottom: 0 !important;
 }
 
 .productos-content p {
-    margin-bottom: 10px !important;  /* Menos espacio después del párrafo */
+    margin-bottom: 0 !important;     /* Eliminamos el margen del párrafo */
 }
 
-/* 2. Ajustamos la sección de los recuadros (Grid) */
+/* 2. Quitamos el espacio superior de la sección de las tarjetas */
+/* Nota: Ajusta '.section-padding' o el nombre del contenedor de tus tarjetas */
 .section-padding { 
-    padding-top: 20px !important;    /* Reducimos el espacio de arriba de los recuadros */
+    padding-top: 10px !important;    /* Espacio mínimo arriba de los recuadros */
 }
 
-.services-grid {
-    margin-top: 0 !important;        /* Eliminamos cualquier margen superior del grid */
+/* 3. Si tienes un título de sección antes de las tarjetas (ej: "Nuestros Planes") */
+.section-title {
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;  /* Reduce el hueco entre el título y las tarjetas */
 }
 
-/* 3. Ajuste fino para la línea roja (si la usas) */
+/* 4. Ajuste de la línea roja para que no flote demasiado */
 .underline {
-    margin-bottom: 15px !important;  /* Reduce el hueco entre la línea y el párrafo */
+    margin-top: 5px !important;
+    margin-bottom: 10px !important;
 }
