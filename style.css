@@ -1279,12 +1279,3 @@ nav ul {
 .acordeon-item.active .acordeon-header i {
     transform: rotate(180deg);
 }
-
-
-/* Agrega o modifica esta clase en tu CSS */
-.asistencia-contacto {
-    display: flex;
-    flex-direction: column; /* Alinea los elementos uno abajo del otro */
-    align-items: flex-start; /* Los pega a la izquierda */
-    text-align: left;
-}
